@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation task by sir</title>
+    <style>
+        .main
+        {
+            /* position: absolute; */
+            display: inline-flex;
+            height: 200px;
+            width: 200px;
+            /* background-color: blue; */
+            border: 5px solid red;
+            align-items: center;
+            justify-content: center;
+            margin: 60px;
+            position: relative;
+
+        }
+        .main:hover
+        {
+            transform: scale(1.5);
+            /* background-color: palevioletred; */
+            border: 5px dashed yellow;
+            border-radius: 300px;
+            animation: Rotate 2s linear 0s infinite;
+        }
+
+        
+        @keyframes inner
+        {
+            0% 
+            {
+                transform: rotate(0deg);
+            }
+
+            100% 
+            {
+                transform: rotate(360deg);
+            }
+        }
+        .main:hover .inner
+        {
+            position: absolute;
+            transform:  scale(1.1);
+            animation: Rotate 5s infinite linear;
+            background-color:transparent;
+            border: 5px dashed black;
+            /* border-radius: 300px ; */
+            transform: rotate(30deg);
+        }
+        @keyframes Rotate 
+        {
+            from 
+            {
+                transform: rotate(0deg);
+            }
+
+            to 
+            {
+                transform: rotate(360deg);
+            }
+        }
+        .inner
+        {
+            /* display: flex; */
+            height: 100px;
+            width: 100px;
+            /* background-image: url("../../../HTML/Images/Flowers/AHMAD.jpg"); */
+            /* background-color: greenyellow; */
+            border: 2px solid fuchsia;
+            align-items: center;
+        }
+        /* .main .inner{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+             background-image: url("../../../HTML/Images/Flowers/AHMAD.jpg"); 
+             background-color: greenyellow; 
+            border: 2px solid fuchsia;
+            align-items: center;
+        } */
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="inner">
+        </div>
+        <div>Still</div>
+    </div>
+    <div class="main">
+        <div class="inner">
+        </div>
+        <div>Still</div>
+    </div>
+    <div class="main">
+        <div class="inner">
+        </div>
+        <div>Still</div>
+    </div>
+    <div class="main">
+        <div class="inner">
+        </div>
+        <div>Still</div>
+    </div>
+</body>
+</html>
